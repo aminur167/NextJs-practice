@@ -35,13 +35,15 @@ const blogs = [
 
 const BlogDetailPage = async ({ params }) => {
   const { blogId } = await params;
-  const blog = blogs.find(blogs =>blog.id ===parseInt(blogId));
+  const blog = blogs.find(blog => blog.id === parseInt(blogId));
   console.log("Show me params",blog);
   return (
     <div>
       <h4 className="text-3xl">Blogs detail coming soon</h4>
       {
-        blog && <div></div>
+        blog && <div>
+          <h2 className="text-4xl font-bold mb-2">{blog.title}</h2>
+        <p>{blog.description}</p></div>
       }
     </div>
   );
