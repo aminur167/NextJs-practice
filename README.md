@@ -1,38 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Practice
+
+A focused learning project built with the Next.js App Router. The application explores nested routes, dynamic route segments, shared layouts, client navigation state, server-side data fetching, Tailwind CSS, and daisyUI components.
+
+## Features
+
+- App Router based page structure under `src/app`
+- Shared root layout with a reusable responsive navbar
+- Active navigation highlighting with `usePathname`
+- Nested dashboard layout with sidebar navigation
+- Static pages for home, about, contact, support, and dashboard sections
+- Dynamic blog detail pages using route parameters
+- Users listing and user details fetched from JSONPlaceholder
+- Tailwind CSS v4 styling with daisyUI components
+- React Compiler enabled in the Next.js configuration
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- daisyUI 5
+- ESLint 9
+
+## Routes
+
+| Route | Description |
+| --- | --- |
+| `/` | Home page |
+| `/about` | About page |
+| `/about/developers` | Developers page |
+| `/about/designers` | Designers page |
+| `/contact` | Contact page |
+| `/contact/support` | Support page |
+| `/blogs` | Blog list page |
+| `/blogs/[blogId]` | Dynamic blog details page |
+| `/users` | Users list fetched from JSONPlaceholder |
+| `/users/[userId]` | Dynamic user details page |
+| `/dashboard` | Dashboard page with nested layout |
+| `/dashboard/revenue` | Revenue page |
+| `/dashboard/profile` | Profile page |
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+```
 
-## Learn More
+Runs the app in development mode.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Creates a production build.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+Starts the production server after a build.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# NextJs-practice" 
-"# NextJs-practice" 
+Runs ESLint checks.
+
+## Project Structure
+
+```text
+src/
+  app/
+    about/
+    blogs/
+    contact/
+    dashboard/
+    users/
+    globals.css
+    layout.js
+    page.js
+  components/
+    Navbar.jsx
+```
+
+## Data Source
+
+The users pages use the public JSONPlaceholder API:
+
+```text
+https://jsonplaceholder.typicode.com/users
+```
+
+## Learning Goals
+
+This project is intended to practice core Next.js concepts, including routing, layouts, dynamic segments, client components, server components, data fetching, and component-based UI styling.
